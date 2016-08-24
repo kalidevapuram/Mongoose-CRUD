@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Displaying al the Dog info</title>
+</head>
+<body>
+	
+	<% for(idx in dogs){ %>
+		<h5>Name:<%= dogs[idx].name%>
+			 <a href="/new">Create Dog</a> |
+			 <a href="/<%=dogs[idx]._id%>/show">Show Dog</a> |
+			 <a href="/<%=dogs[idx]._id%>/edit">Edit Dog</a> |
+				<form action="/<%=dogs[idx]._id%>/delete" method="post">
+					<input type="submit" Value="Delete Dogs">
+				</form>
+		</h5>
+		<h5>Age:<%= dogs[idx].age%></h5>
+	<%}%>
+</body>
+</html>

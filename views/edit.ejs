@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editing the Dog Info</title>
+</head>
+<body>
+
+	<form method="post" action="/<%=dogs._id%>/update">
+		Name:<input type="text" name="name" value="<%=dogs.name%>">
+		Age:<input type="text" name="age" value="<%=dogs.age%>">
+		<input type="submit" value="Update Dog">
+	</form>
+	<a href="/"> Cancel</a>
+</body>
+</html>
